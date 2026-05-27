@@ -205,10 +205,14 @@ search_entry = Entry(window, textvar=Search_title, width=33)
 search_entry.place(x=10, y=345)
 
 search_btn = Button(window, relief=RAISED, text="Search by Title", width=25, bg="#e67e22", fg="white", font=("Arial", 9, "bold"), command=search_book)
-search_btn.place(x=10, y=375)
+search_btn.place(x=10, y=365)
+
+# ESTE ES EL NUEVO BOTÓN PARA TU MEJORA GRUPAL
+search_author_btn = Button(window, relief=RAISED, text="Search by Author", width=25, bg="#d35400", fg="white", font=("Arial", 9, "bold"), command=search_by_author)
+search_author_btn.place(x=10, y=395)
 
 delete_btn = Button(window, relief=RAISED, text="Delete Book", width=25, bg="#c0392b", fg="white", font=("Arial", 9, "bold"), command=delete_book)
-delete_btn.place(x=10, y=415)
+delete_btn.place(x=10, y=425)
 
 exit_btn = Button(window, relief=RAISED, text="Exit", width=25, bg="#7f8c8d", fg="white", font=("Arial", 9, "bold"), command=exit_program)
 exit_btn.place(x=10, y=455)
