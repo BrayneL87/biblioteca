@@ -85,6 +85,31 @@ def show_all_books():
     
     display.config(state=DISABLED)
 
+# Search book by author
+def search_by_author():
+    search_term = Search_title.get().strip().lower()
+    if not search_term:
+        messagebox.showwarning('Warning', 'Please enter an author to search')
+        return
+    books = load_books()
+    results = [book for book in books if search_term in book['author'].lower()]
+    display.config(state=NORMAL)
+    display.delete(1.0, END)
+    if results:
+        display.insert(END, "=" * 80 + "\n")
+        display.insert(END, "SEARCH BY AUTHOR RESULTS\n")
+        display.insert(END, "=" * 80 + "\n")
+        display.insert(END, f"{'TITLE':<30} {'AUTHOR':<25} {'YEAR':<10}\n")
+        display.insert(END, "-" * 80 + "\n")
+        for book in results:
+            title = book['title'][:29]
+            author = book['author'][:24]
+            year = str(book['year'])
+            display.insert(END, f"{title:<30} {author:<25} {year:<10}\n")
+    else:
+        display.insert(END, f"No books found matching author '{search_term}'\n")
+    display.config(state=DISABLED)
+
 # Search book by title
 def search_book():
     search_term = Search_title.get().strip().lower()
