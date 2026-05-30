@@ -2,5 +2,33 @@ git add .
 git commit -m "Proyecto clonado y ejecutado"
 git push origin main
 
+*******************************************************************
 git reset --hard 24ce44b
 git push origin main --force
+
+git reset se utiliza para borrar todos los cambios y regresa al 
+primer comentario que se subio y queda el proyecto desde el inicio
+y lo utlice para corregir daños del proyecto
+
+git push origin main --force el git push origin main subel el
+el proyecto y junto --force lo que hace es obligar a que se 
+sobrescriba con lo que tienes en tu local, aunque eso borre o 
+reemplace el historial que ya estaba en GitHub.
+*******************************************************************
+
+*******************************************************************
+git checkout main  
+Se utiliza git checkout main para regresar a la rama main igual se
+ utiliza para ingresar las ramas de los colaboradoes
+*******************************************************************
+
+*******************************************************************
+git pull origin main
+Trae lo último del remoto:
+*******************************************************************
+
+*******************************************************************
+git merge contador-de-libros
+este git marge se utiliza para subir el boton contador de libros o 
+los cambios de la ramas de los colaboradoes
+*******************************************************************
