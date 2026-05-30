@@ -11,8 +11,8 @@ Book_author = StringVar()
 Publication_year = StringVar()
 Search_title = StringVar()
 
-window.geometry("1200x500")
-window.title("Book Management System")
+window.geometry("1200x550")
+window.title("Biblioteca Management System")
 
 BOOKS_FILE = "books.json"
 
@@ -38,16 +38,16 @@ def register_book():
     year = Publication_year.get().strip()
     
     if not title or not author or not year:
-        messagebox.showerror('Error', 'Please fill in all fields')
+        messagebox.showerror('Error', 'Por favor, rellene todos los campos.')
         return
     
     try:
         year_int = int(year)
         if year_int < 0 or year_int > 2100:
-            messagebox.showerror('Error', 'Publication year must be between 0 and 2100')
+            messagebox.showerror('Error', 'El año de publicación debe estar entre 0 y 2100')
             return
     except ValueError:
-        messagebox.showerror('Error', 'Publication year must be a number')
+        messagebox.showerror('Error', 'El año de publicación debe ser un número')
         return
     
     books = load_books()
@@ -61,7 +61,7 @@ def register_book():
     Book_title.set('')
     Book_author.set('')
     Publication_year.set('')
-    messagebox.showinfo('Success', f'Book "{title}" registered successfully!')
+    messagebox.showinfo('Éxito', f'Libro "{title}" registrado exitosamente!')
     refresh_display()
 
 # Show all books
@@ -72,10 +72,10 @@ def show_all_books():
     books = load_books()
     
     if not books:
-        display.insert(END, "No books registered yet.\n")
+        display.insert(END, "Aún no hay libros registrados.\n")
     else:
         display.insert(END, "=" * 80 + "\n")
-        display.insert(END, f"{'TITLE':<30} {'AUTHOR':<25} {'YEAR':<10}\n")
+        display.insert(END, f"{'TÍTULO':<30} {'AUTOR':<25} {'AÑO':<10}\n")
         display.insert(END, "=" * 80 + "\n")
         for book in books:
             title = book['title'][:29]
@@ -90,7 +90,7 @@ def search_book():
     search_term = Search_title.get().strip().lower()
     
     if not search_term:
-        messagebox.showwarning('Warning', 'Please enter a title to search')
+        messagebox.showwarning('Advertencia', 'Por favor, ingrese un título para buscar')
         return
     
     books = load_books()
@@ -101,9 +101,9 @@ def search_book():
     
     if results:
         display.insert(END, "=" * 80 + "\n")
-        display.insert(END, "SEARCH RESULTS\n")
+        display.insert(END, "RESULTADOS DE LA BÚSQUEDA\n")
         display.insert(END, "=" * 80 + "\n")
-        display.insert(END, f"{'TITLE':<30} {'AUTHOR':<25} {'YEAR':<10}\n")
+        display.insert(END, f"{'TÍTULO':<30} {'AUTOR':<25} {'AÑO':<10}\n")
         display.insert(END, "-" * 80 + "\n")
         for book in results:
             title = book['title'][:29]
@@ -111,7 +111,7 @@ def search_book():
             year = str(book['year'])
             display.insert(END, f"{title:<30} {author:<25} {year:<10}\n")
     else:
-        display.insert(END, f"No books found matching '{search_term}'")
+        display.insert(END, f"No se encontraron libros que coincidan con '{search_term}'")
     
     display.config(state=DISABLED)
 
@@ -129,10 +129,10 @@ def delete_book():
     
     if len(books) < original_count:
         save_books(books)
-        messagebox.showinfo('Success', 'Book deleted successfully!')
+        messagebox.showinfo('Éxito', 'Libro eliminado exitosamente!')
         refresh_display()
     else:
-        messagebox.showwarning('Not Found', f'No book found with title "{search_term}"')
+        messagebox.showwarning('No Encontrado', f'No se encontró un libro con el título "{search_term}"')
 
 # Refresh display with all books
 def refresh_display():
@@ -144,45 +144,45 @@ def exit_program():
         window.quit()
 
 # Main labels
-title_label = Label(master=window, text="Book Management System", fg="white", bg="#1a5276", relief=RAISED, font=("Arial", 14, "bold"))
+title_label = Label(master=window, text="Biblioteca Management System", fg="white", bg="#1a5276", relief=RAISED, font=("Arial", 14, "bold"))
 title_label.place(x=0, y=0, width=1200, height=40)
 
 # Left panel - Input fields
-input_frame = Label(master=window, text="Register New Book", fg="white", bg="#2c3e50", relief=RAISED, font=("Arial", 11, "bold"))
+input_frame = Label(master=window, text="Registrar Nuevo Libro", fg="white", bg="#2c3e50", relief=RAISED, font=("Arial", 11, "bold"))
 input_frame.place(x=0, y=40, width=280, height=460)
 
-title_label = Label(master=window, text="Title:", fg="white", bg="#34495e", relief=FLAT, font=("Arial", 9))
+title_label = Label(master=window, text="Título:", fg="white", bg="#34495e", relief=FLAT, font=("Arial", 9))
 title_label.place(x=10, y=60)
 title_entry = Entry(window, textvar=Book_title, width=33)
 title_entry.place(x=10, y=85)
 
-author_label = Label(master=window, text="Author:", fg="white", bg="#34495e", relief=FLAT, font=("Arial", 9))
+author_label = Label(master=window, text="Autor:", fg="white", bg="#34495e", relief=FLAT, font=("Arial", 9))
 author_label.place(x=10, y=115)
 author_entry = Entry(window, textvar=Book_author, width=33)
 author_entry.place(x=10, y=140)
 
-year_label = Label(master=window, text="Publication Year:", fg="white", bg="#34495e", relief=FLAT, font=("Arial", 9))
+year_label = Label(master=window, text="Año de Publicación:", fg="white", bg="#34495e", relief=FLAT, font=("Arial", 9))
 year_label.place(x=10, y=170)
 year_entry = Entry(window, textvar=Publication_year, width=33)
 year_entry.place(x=10, y=195)
 
 # Buttons in left panel
-register_btn = Button(window, relief=RAISED, text='Register Book', width=25, bg="#27ae60", fg="white", font=("Arial", 9, "bold"), command=register_book)
+register_btn = Button(window, relief=RAISED, text='Registrar Libro', width=25, bg="#27ae60", fg="white", font=("Arial", 9, "bold"), command=register_book)
 register_btn.place(x=10, y=235)
 
-show_btn = Button(window, relief=RAISED, text="Show All Books", width=25, bg="#2980b9", fg="white", font=("Arial", 9, "bold"), command=show_all_books)
+show_btn = Button(window, relief=RAISED, text="Mostrar Todos los Libros", width=25, bg="#2980b9", fg="white", font=("Arial", 9, "bold"), command=show_all_books)
 show_btn.place(x=10, y=275)
 
 # Search section
-search_label = Label(master=window, text="Search Book:", fg="white", bg="#34495e", relief=FLAT, font=("Arial", 9))
+search_label = Label(master=window, text="Buscar Libro:", fg="white", bg="#34495e", relief=FLAT, font=("Arial", 9))
 search_label.place(x=10, y=320)
 search_entry = Entry(window, textvar=Search_title, width=33)
 search_entry.place(x=10, y=345)
 
-search_btn = Button(window, relief=RAISED, text="Search by Title", width=25, bg="#e67e22", fg="white", font=("Arial", 9, "bold"), command=search_book)
+search_btn = Button(window, relief=RAISED, text="Buscar por Título", width=25, bg="#e67e22", fg="white", font=("Arial", 9, "bold"), command=search_book)
 search_btn.place(x=10, y=375)
 
-delete_btn = Button(window, relief=RAISED, text="Delete Book", width=25, bg="#c0392b", fg="white", font=("Arial", 9, "bold"), command=delete_book)
+delete_btn = Button(window, relief=RAISED, text="Eliminar Libro", width=25, bg="#c0392b", fg="white", font=("Arial", 9, "bold"), command=delete_book)
 delete_btn.place(x=10, y=415)
 
 exit_btn = Button(window, relief=RAISED, text="Exit", width=25, bg="#7f8c8d", fg="white", font=("Arial", 9, "bold"), command=exit_program)
@@ -190,7 +190,7 @@ exit_btn.place(x=10, y=455)
 
 # Right panel - Display
 display = Text(window, width=95, height=27, bg='#ecf0f1', fg='#2c3e50', font=("Courier", 9))
-display.place(x=300, y=50)
+display.place(x=400, y=50)
 display.config(state=DISABLED)
 
 # Load and display initial books

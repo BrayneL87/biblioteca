@@ -1,33 +1,169 @@
-# Inventory-management-system-
+## 📚 Biblioteca System
 
-Markdown
-# 📦 Sistema de Gestión de Inventario con Python y Tkinter 🚀
-
-¡Bienvenido! Este proyecto es una aplicación de escritorio intuitiva y ligera desarrollada en **Python** que utiliza la interfaz gráfica de usuario (**Tkinter**) para la administración y control de stock de productos. 
-
-Lo mejor de este sistema es su simplicidad: **no requiere la configuración de bases de datos tradicionales**. Toda la información se almacena, lee y actualiza automáticamente en un archivo de texto plano (`.txt`) local. Si el archivo no existe en el sistema, la aplicación lo creará por ti al iniciar. 
+Sistema de gestión de libros desarrollado en Python con interfaz gráfica usando Tkinter. Permite registrar, buscar, visualizar y eliminar libros almacenando la información en archivos JSON.
 
 ---
 
-## ✨ Características Principales
+## 🚀 Características
 
-* 🖥️ **Interfaz Gráfica Limpia:** Ventana interactiva y amigable estructurada con formularios y tablas visuales.
-* 💾 **Persistencia de Datos Local:** Guardado automático y directo en un archivo de texto integrado.
-* 🔄 **Operaciones CRUD Completas:** Permite registrar, visualizar, actualizar y eliminar productos del inventario de forma inmediata.
-* 🎨 **Código Personalizable:** Estructura flexible que permite modificar fácilmente los colores, la plantilla y el tamaño de la ventana según tus necesidades.
-
----
-
-## 🖼️ Vista previa
-
-![Vista previa](./img/2026-05-24.jpg)
+✅ Registro de nuevos libros  
+✅ Visualización de todos los libros registrados  
+✅ Búsqueda de libros por título  
+✅ Eliminación de libros  
+✅ Almacenamiento automático de datos  
+✅ Validación de campos y datos ingresados  
+✅ Interfaz gráfica amigable  
 
 ---
 
-![Vista previa](./img/2026-05-24_1.jpg)
+## 🛠 Tecnologías utilizadas
+
+- Python
+- Tkinter
+- JSON
+- Visual Studio Code
 
 ---
 
-## 😎 Autor
+## 📂 Estructura del proyecto
 
-Proyecto creado por BrayneL87 ✨# biblioteca
+```bash
+biblioteca/
+│
+├── project.py
+├── books.json
+├── test_books.py
+├── comentarios.txt
+├── README.md
+```
+
+---
+
+## ⚙️ Instalación
+
+### 1. Clonar repositorio
+
+```bash
+git clone https://github.com/BrayneL87/biblioteca.git
+```
+
+Entrar al directorio:
+
+```bash
+cd biblioteca
+```
+
+---
+
+## ▶️ Ejecutar el proyecto
+
+Ejecuta el archivo principal:
+
+```bash
+python project.py
+```
+
+---
+
+## 💾 Almacenamiento de datos
+
+La información se guarda automáticamente en:
+
+```bash
+books.json
+```
+
+El archivo almacena:
+
+- Título del libro
+- Autor
+- Año de publicación
+
+Ejemplo:
+
+```json
+[
+    {
+        "title":"Python Básico",
+        "author":"John Doe",
+        "year":2025
+    }
+]
+```
+
+---
+
+## 📸 Capturas de pantalla
+
+Agrega imágenes de tu aplicación aquí:
+
+### Registro de libros
+
+![Vista previa](./img/registrarlibro.jpg)
+
+### Guardar de libros
+
+![Vista previa](./img/guardarlibro.jpg)
+
+### Buscar libros
+
+![Vista previa](./img/buscarlibro.jpg)
+
+### Ver Lista Libros
+
+![Vista previa](./img/ver_todos_libros.jpg)
+
+### Borrar libro
+
+![Vista previa](./img/borrarlibro.jpg)
+
+### Titulo incorrecto no Borrar libro
+
+![Vista previa](./img/tituloincorrecto.jpg)
+
+### Titulo correcto Borrar libro
+
+![Vista previa](./img/titulocorrecto.jpg)
+
+### Aceptar Borrar libro
+
+![Vista previa](./img/aceptarborrar.jpg)
+
+### Desparece de la lista registrada
+
+![Vista previa](./img/desapararcelista.jpg)
+
+### Salir
+
+![Vista previa](./img/salir.jpg)
+
+
+---
+
+## 🔮 Mejoras futuras
+
+- Editar información de libros
+- Agregar categorías
+- Sistema de usuarios
+- Exportar información a PDF
+- Integrar base de datos MySQL
+
+---
+
+## 👨‍💻 Autor
+
+Desarrollado por 
+*Braynel Yecid
+*Jhonatan
+*Sofia
+*Jair
+
+GitHub:
+
+https://github.com/BrayneL87
+
+---
+
+## 📄 Licencia
+
+Proyecto desarrollado con fines educativos y de aprendizaje.# Biblioteca-Q10

@@ -1,7 +1,22 @@
 [
     {
-        "title": "Biblia",
-        "author": "Dios",
-        "year": 2025
+        "title": "Código Limpio (Clean Code)",
+        "author": "Robert C. Martin (Tío Bob)",
+        "year": 2008
+    },
+    {
+        "title": "El programador pragmático (The Pragmatic Programmer)",
+        "author": "Andrew Hunt y David Thomas",
+        "year": 1999
+    },
+    {
+        "title": "Patrones de diseño (Design Patterns)",
+        "author": "Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides",
+        "year": 1994
+    },
+    {
+        "title": "Fundamentos de Programación",
+        "author": "Luis Joyanes Aguilar",
+        "year": 2003
     }
 ]
