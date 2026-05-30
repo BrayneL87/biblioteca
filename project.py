@@ -38,6 +38,8 @@ def register_book():
     title = Book_title.get().strip()
     author = Book_author.get().strip()
     year = Publication_year.get().strip()
+
+    
     
     if not title or not author or not year:
         messagebox.showerror('Error', 'Por favor, rellene todos los campos.')
@@ -190,16 +192,13 @@ search_entry.place(x=10, y=345)
 search_btn = Button(window, relief=RAISED, text="Buscar por Título", width=25, bg="#e67e22", fg="white", font=("Arial", 9, "bold"), command=search_book)
 search_btn.place(x=10, y=375)
 
-#<<<<<<< HEAD
-delete_btn = Button(window, relief=RAISED, text="Eliminar Libro", width=25, bg="#c0392b", fg="white", font=("Arial", 9, "bold"), command=delete_book)
-delete_btn.place(x=10, y=415)
-#=======
+#contador de libros
 contador_btn = Button(window, relief=RAISED, text="Contador de Libros", width=25, bg="#16a085", fg="white", font=("Arial", 9, "bold"), command=contador_libros)
 contador_btn.place(x=10, y=415)
 
-delete_btn = Button(window, relief=RAISED, text="Delete Book", width=25, bg="#c0392b", fg="white", font=("Arial", 9, "bold"), command=delete_book)
+#Eliminar libros
+delete_btn = Button(window, relief=RAISED, text="Eliminar Libros", width=25, bg="#c0392b", fg="white", font=("Arial", 9, "bold"), command=delete_book)
 delete_btn.place(x=10, y=455)
-#>>>>>>> contador-de-libros
 
 exit_btn = Button(window, relief=RAISED, text="Exit", width=25, bg="#7f8c8d", fg="white", font=("Arial", 9, "bold"), command=exit_program)
 exit_btn.place(x=10, y=495)
