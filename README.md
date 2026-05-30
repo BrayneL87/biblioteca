@@ -152,11 +152,15 @@ Agrega imágenes de tu aplicación aquí:
 
 ## 👨‍💻 Autor
 
+<<<<<<< HEAD
 Desarrollado por 
 *Braynel Yecid
 *Jhonatan
 *Sofia
 *Jair
+=======
+Desarrollado por **Braynel Yecid**
+>>>>>>> contador-de-libros
 
 GitHub:
 
@@ -166,4 +170,8 @@ https://github.com/BrayneL87
 
 ## 📄 Licencia
 
+<<<<<<< HEAD
 Proyecto desarrollado con fines educativos y de aprendizaje.# Biblioteca-Q10
+=======
+Proyecto desarrollado con fines educativos y de aprendizaje.
+>>>>>>> contador-de-libros

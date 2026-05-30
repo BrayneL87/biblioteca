@@ -1,5 +1,6 @@
 [
     {
+<<<<<<< HEAD
         "title": "Código Limpio (Clean Code)",
         "author": "Robert C. Martin (Tío Bob)",
         "year": 2008
@@ -18,5 +19,35 @@
         "title": "Fundamentos de Programación",
         "author": "Luis Joyanes Aguilar",
         "year": 2003
+=======
+        "title": "Don Quijote",
+        "author": "Miguel de Cervantes",
+        "year": 1605
+    },
+    {
+        "title": "Cien años de soledad",
+        "author": "Gabriel García Márquez",
+        "year": 1967
+    },
+    {
+        "title": "El Quijote",
+        "author": "Miguel de Cervantes",
+        "year": 1605
+    },
+    {
+        "title": "La Casa de los Espíritus",
+        "author": "Isabel Allende",
+        "year": 1982
+    },
+    {
+        "title": "Ficciones",
+        "author": "Jorge Luis Borges",
+        "year": 1944
+    },
+    {
+        "title": "El olvido que seremos",
+        "author": "Héctor Abad Faciolince",
+        "year": 2006
+>>>>>>> contador-de-libros
     }
 ]

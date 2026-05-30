@@ -12,7 +12,11 @@ Publication_year = StringVar()
 Search_title = StringVar()
 
 window.geometry("1200x550")
+<<<<<<< HEAD
 window.title("Biblioteca Management System")
+=======
+window.title("Book Management System")
+>>>>>>> contador-de-libros
 
 BOOKS_FILE = "books.json"
 
@@ -138,6 +142,12 @@ def delete_book():
 def refresh_display():
     show_all_books()
 
+# Contador de libros
+def contador_libros():
+    books = load_books()
+    total = len(books)
+    messagebox.showinfo("Contador de Libros", f"Total de libros registrados: {total}")    
+
 # Exit program
 def exit_program():
     if messagebox.askyesno('Exit', 'Are you sure you want to exit?'):
@@ -182,11 +192,19 @@ search_entry.place(x=10, y=345)
 search_btn = Button(window, relief=RAISED, text="Buscar por Título", width=25, bg="#e67e22", fg="white", font=("Arial", 9, "bold"), command=search_book)
 search_btn.place(x=10, y=375)
 
+<<<<<<< HEAD
 delete_btn = Button(window, relief=RAISED, text="Eliminar Libro", width=25, bg="#c0392b", fg="white", font=("Arial", 9, "bold"), command=delete_book)
 delete_btn.place(x=10, y=415)
+=======
+contador_btn = Button(window, relief=RAISED, text="Contador de Libros", width=25, bg="#16a085", fg="white", font=("Arial", 9, "bold"), command=contador_libros)
+contador_btn.place(x=10, y=415)
+
+delete_btn = Button(window, relief=RAISED, text="Delete Book", width=25, bg="#c0392b", fg="white", font=("Arial", 9, "bold"), command=delete_book)
+delete_btn.place(x=10, y=455)
+>>>>>>> contador-de-libros
 
 exit_btn = Button(window, relief=RAISED, text="Exit", width=25, bg="#7f8c8d", fg="white", font=("Arial", 9, "bold"), command=exit_program)
-exit_btn.place(x=10, y=455)
+exit_btn.place(x=10, y=495)
 
 # Right panel - Display
 display = Text(window, width=95, height=27, bg='#ecf0f1', fg='#2c3e50', font=("Courier", 9))
