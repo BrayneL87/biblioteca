@@ -157,9 +157,9 @@ def exit_program():
 title_label = Label(master=window, text="Biblioteca Management System", fg="white", bg="#1a5276", relief=RAISED, font=("Arial", 14, "bold"))
 title_label.place(x=0, y=0, width=1200, height=40)
 
-# Left panel - Input fields
+# izquierdo panel - Input fields 
 input_frame = Label(master=window, text="Registrar Nuevo Libro", fg="white", bg="#2c3e50", relief=RAISED, font=("Arial", 11, "bold"))
-input_frame.place(x=0, y=40, width=280, height=460)
+input_frame.place(x=0, y=40, width=280, height=550)
 
 title_label = Label(master=window, text="Título:", fg="white", bg="#34495e", relief=FLAT, font=("Arial", 9))
 title_label.place(x=10, y=60)
@@ -208,7 +208,7 @@ display = Text(window, width=95, height=27, bg='#ecf0f1', fg='#2c3e50', font=("C
 display.place(x=400, y=50)
 display.config(state=DISABLED)
 
-# Load and display initial books
+# Load and display initial books 
 show_all_books()
 
 window.mainloop()
