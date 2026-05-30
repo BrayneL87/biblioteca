@@ -38,8 +38,12 @@ def register_book():
     title = Book_title.get().strip()
     author = Book_author.get().strip()
     year = Publication_year.get().strip()
+    books = load_books()
 
-    
+    for book in books:
+        if book['title'].lower() == title.lower():
+            messagebox.showerror('Error', 'Ya existe un libro con ese título.')
+            return    
     
     if not title or not author or not year:
         messagebox.showerror('Error', 'Por favor, rellene todos los campos.')

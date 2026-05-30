@@ -32,3 +32,9 @@ git merge contador-de-libros
 este git marge se utiliza para subir el boton contador de libros o 
 los cambios de la ramas de los colaboradoes
 *******************************************************************
+
+*******************************************************************
+git merge --abort
+se utiliza para eliminiar o regresar el ultimo cambio que se realizo
+de la rama que presento conflisto
+********************************************************************
