@@ -1,3 +1,6 @@
 git add .
 git commit -m "Proyecto clonado y ejecutado"
 git push origin main
+
+git reset --hard 24ce44b
+git push origin main --force
